@@ -1,70 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
-
-	<!-- Use UTF character set, a good idea with any webpage -->
-	<meta charset="UTF-8" />
-	<!-- Set viewport so page remains consistently scaled w narrow devices -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
-	<link rel="stylesheet" type="text/css" href="../css/site.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<!-- Load jQuery library -->
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous"></script>
-	<!-- Load p5.js library -->
-	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
-
-	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
-    <script type="text/javascript" src="../js/site.js" DEFER></script>
-	<!-- Use me for a JavaScript OOP Project -->
-	<script type="text/javascript" src="./js/project.js" DEFER></script>
-	<!-- Use me for a p5.js project -->
-	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
-</head>
-<body>
-	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
-	<main id="content">
-		<section>
-
-			<h1>Experiment X - Subject/Topic</h1>
-
-			<div class="minor-section">
-				<div id="canvas-container">
-					<!-- canvas will be added here -->
-				</div>
-                <div class="fullscreen-box">
-                    <button id="fullscreen">Fullscreen</button>
-                </div>
-			</div>
-
-			<div class="minor-section">
-				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
-			</div>
-
-			<div class="minor-section">
-				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
-			</div>
-
-			<div class="minor-section">
-				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
-			</div>
-
-		</section>
-		<nav id="links" class="minor-section">
-			<!-- Put link back to homepage here. -->
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-            </ul>
-		</nav>
-	</main>
-</body>
+ <head>
+  <!-- This title is used for tabs and bookmarks -->
+  <title>
+   Experiment 02: Living Impressions
+  </title>
+  <!-- Use UTF character set, a good idea with any webpage -->
+  <meta charset="utf-8"/>
+  <!-- Set viewport so page remains consistently scaled w narrow devices -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- Include CSS file, including a site-wide CSS and for this particular page -->
+  <link href="../css/site.css" rel="stylesheet" type="text/css"/>
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <!-- Load jQuery library -->
+  <script crossorigin="anonymous" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" src="https://code.jquery.com/jquery-3.7.1.min.js">
+  </script>
+  <!-- Load p5.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js">
+  </script>
+  <!-- Link to javascript files - DEFER waits until all elements are rendered -->
+  <script defer="" src="../js/site.js" type="text/javascript">
+  </script>
+  <!-- Use me for a JavaScript OOP Project -->
+  <script defer="" src="./js/project.js" type="text/javascript">
+  </script>
+  <!-- Use me for a p5.js project -->
+  <script defer="" src="./js/sketch.js" type="text/javascript">
+  </script>
+ </head>
+ <body>
+  <!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+  <main id="content">
+   <section>
+    <h1>
+     Experiment 02: Living Impressions
+    </h1>
+    <div class="minor-section">
+     <div id="canvas-wrapper" style="display: flex; justify-content: center; gap: 30px; align-items: flex-start; margin-bottom: 20px;">
+      <div id="canvas-container">
+       <!-- canvas will be added here -->
+       <div class="fullscreen-box">
+        <button id="reimagine">
+         reimagine
+        </button>
+        <button id="fullscreen">
+         Fullscreen
+        </button>
+       </div>
+      </div>
+      <div class="image-wrapper">
+       <!-- <img class="photo" src="./img/Experiment 02.jpg"> -->
+       <img class="photo" src="./img/Experiment 02.jpg" style="max-width: 600px; width: 100%; height: auto;"/>
+      </div>
+     </div>
+    </div>
+    <div class="minor-section">
+     <h2>
+      Description
+     </h2>
+     <p>
+      This generative sketch recreates a desert scene inspired by a photo I took while camping in Death Valley. 
+    It features mountains, sand, clouds, and bushes, with randomized layout each time the scene is reimagined.
+     </p>
+    </div>
+    <div class="minor-section">
+     <h2>
+      Technical
+     </h2>
+     <p>
+      The sketch uses p5.js with `beginShape()` for mountains and `ellipse()` for clouds and bushes. 
+    Randomness controls the position and scale of elements. The canvas updates each time the "Reimagine" button is clicked, 
+    using a seeded generation system to vary the composition.
+     </p>
+    </div>
+    <div class="minor-section">
+     <h2>
+      Reflection
+     </h2>
+     <p>
+      This project helped me explore how code can express natural landscapes. 
+    Translating real-world elements like clouds or dunes into generative visuals was both creative and technical. 
+    It was also meaningful to base the project on a photo I took myself.
+     </p>
+    </div>
+   </section>
+   <nav class="minor-section" id="links">
+    <!--Put link back to homepage here.-->
+    <ul>
+     <li>
+      <a href="../index.html">
+       Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </main>
+ </body>
 </html>
