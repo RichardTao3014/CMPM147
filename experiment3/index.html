@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 03 - Alternate Worlds</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -32,30 +32,41 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 3 - Alternate Worlds</h1>
 
-			<div class="minor-section">
-				<div id="canvas-container">
-					<!-- canvas will be added here -->
+			<div class="minor-section" style="display: flex; gap: 20px; align-items: flex-start;">
+				<!-- Canvas added here -->
+				<div id="canvasContainer" style="margin-left: 10px;"></div>
+				<div>
+					<textarea cols="20" rows="20" id="asciiBox" style="opacity: 0.5; letter-spacing: 1ex; width: 320px; font-family: monospace;"></textarea>
+					<br />
+					<!-- <button id="reseedButton">reseed</button>
+					<span id="seedReport"></span> -->
+					<div id="buttonRow" style="display: flex; gap: 10px; align-items: center;">
+						<button id="reseedButton">reseed</button>
+						<span id="seedReport"></span>
+						<!-- Toggle Map 按钮将通过 JS 添加在这里 -->
+					  </div>
+					  
+					<div class="fullscreen-box">
+						<button id="fullscreen">Fullscreen</button>
+					</div>
 				</div>
-                <div class="fullscreen-box">
-                    <button id="fullscreen">Fullscreen</button>
-                </div>
 			</div>
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>This project was all about trying out how to randomly generate different types of maps, like terrain and dungeons.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>I used p5.js to create a grid-based world where each map is generated using a seed, then shown with tiles and matching ASCII characters.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>It was fun to figure out how code can turn simple rules into full maps—felt like building a little game world from scratch.</p>
 			</div>
 
 		</section>
