@@ -10,15 +10,15 @@ let cols, rows;
 let worldGrid, dungeonGrid;
 let isDrawDungeon = false;
 
-let tileMap = {
-  'W': [4, 0],  // water
-  'F': [2, 1],  // forest
-  'S': [1, 3],  // snow
-  'H': [0, 3],  // house
-  'T': [3, 3],  // treasure
-  '#': [0, 7],  // wall
-  '+': [2, 6],  // floor
-  'O': [1, 4]   // totem
+let tileMap = {//[横，竖]
+  'W': [0, 13],  // water
+  'F': [15, 0],  // forest
+  'S': [15, 12],  // snow
+  'H': [0, 26],  // house
+  'T': [5, 28],  // treasure
+  '#': [14, 21],  // wall
+  '+': [1, 22],  // floor
+  'O': [5, 30]   // totem
 };
 
 function setup() {
@@ -53,10 +53,18 @@ function setup() {
 
 function updateAsciiBox(grid) {
   let output = "";
+  let targetLength = grid[0].length;
+
   for (let j = 0; j < grid.length; j++) {
-    output += grid[j].join("") + "";
+    let line = grid[j].join("");
+    // 补齐尾部空格，防止有些行过短
+    while (line.length < targetLength) {
+      line += " ";
+    }
+    output += line + "\n";
   }
-  document.getElementById("asciiBox").value = output;
+
+  document.getElementById("asciiBox").value = output.trim();
 }
 
 
@@ -64,6 +72,8 @@ function draw() {
   let grid = isDrawDungeon ? dungeonGrid : worldGrid;
   drawGrid(grid);
   updateAsciiBox(grid);  // ✅ 把字符填到 textarea
+  console.table(isDrawDungeon ? dungeonGrid : worldGrid);
+
 }
 
 function generateWorldMap(cols, rows) {
@@ -155,3 +165,4 @@ function drawGrid(grid) {
     }
   }
 }
+
