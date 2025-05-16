@@ -11,7 +11,7 @@ let worldGrid, dungeonGrid;
 let isDrawDungeon = false;
 
 let tileMap = {//[横，竖]
-  'W': [0, 13],  // water
+  'W': [1, 13],  // water
   'F': [15, 0],  // forest
   'S': [15, 12],  // snow
   'H': [0, 26],  // house
